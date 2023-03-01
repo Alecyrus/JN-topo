@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import ForceGraph3D from '3d-force-graph';
+
+// @ts-ignore
 import graphData from './data';
 
 onMounted(() => {
+  // @ts-ignore
   const Graph = ForceGraph3D()(document.getElementById('3d-graph'))
     .nodeAutoColorBy('node_type')
     .linkAutoColorBy((d) => {
