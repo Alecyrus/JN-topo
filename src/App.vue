@@ -9,10 +9,6 @@ onMounted(() => {
   // @ts-ignore
   const Graph = ForceGraph3D()(document.getElementById('3d-graph'))
     .nodeAutoColorBy('node_type')
-    .linkAutoColorBy((d) => {
-      console.log(graphData.nodes[d.source]);
-      return graphData.nodes[d.source].node_type;
-    })
     .linkOpacity(0.5)
     .graphData(graphData);
 });
